@@ -1,0 +1,16 @@
+-- Instalando o keycloak
+https://www.keycloak.org/getting-started/getting-started-docker
+
+-- Criando tema
+criar a pasta meutema
+
+Dentro do docker-compose.yaml
+app
+    volumes:
+        - ./meutema:/opt/jboss/keycloak/themes/meutema
+
+comando para copiar o tema
+docker exec -it keycloak bash
+cp -R keycloak/* meutema/
+copia o tema base
+cp -R keycloak/base/* meutema/
